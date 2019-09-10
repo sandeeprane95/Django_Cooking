@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 
+
 urlpatterns = [
 	url(r'^admin/', admin.site.urls),
-	# url(r'^api/cook_book/', include(('cook_book.api.urls', 'cook_book'), 
-	# 	namespace='cookbook-api')),
-	]
+	url(r'^api/cook_book/', include(('cook_book.api.urls', 'cook_book'), 
+		namespace='cookbook-api')),
+]
